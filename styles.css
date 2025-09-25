@@ -1,0 +1,320 @@
+:root {
+    --bg: #071018;
+    --surface: #0f1720;
+    --text: rgb(234, 244, 255);
+    --muted: rgb(166, 200, 255);
+    --primary: rgb(58, 163, 255);
+    --radius: 12px;
+    --transition: 260ms cubic-bezier(.2, .9, .3, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, rgb(7, 16, 24) 0%, rgb(13, 17, 20) 100%);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header {
+    position: relative;
+    z-index: 40;
+    padding: 8px 16px;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--surface);
+    padding: 10px 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 40px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text);
+    cursor: pointer;
+    flex: 0 0 44px;
+    transition: opacity 220ms ease, transform 220ms cubic-bezier(.2, .9, .3, 1);
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.burger .bar {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background: var(--text);
+    display: block;
+    border-radius: 2px;
+    transition: transform 320ms cubic-bezier(.2, .9, .3, 1), opacity 200ms;
+}
+
+.burger .bar::before,
+.burger .bar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: inherit;
+    border-radius: 2px;
+    transition: transform 320ms cubic-bezier(.2, .9, .3, 1);
+}
+
+.burger .bar::before {
+    top: -7px;
+}
+
+.burger .bar::after {
+    top: 7px;
+}
+
+.burger.open .bar {
+    background: transparent;
+}
+
+.burger.open .bar::before {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.burger.open .bar::after {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+.burger.force-show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+.burger.inactive {
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.brand {
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 8px;
+    transition: max-width var(--transition), font-size var(--transition);
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.nav {
+    display: flex;
+    gap: 8px;
+    margin-left: 8px;
+    align-items: center;
+    flex: 0 0 auto;
+    transition: opacity var(--transition), transform var(--transition);
+    min-width: 0;
+}
+
+.nav.hidden {
+    display: none;
+}
+
+.nav-link {
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateY(-3px);
+}
+
+.mobile-menu {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(2, 6, 12, 0.6);
+    z-index: 60;
+    padding: 28px;
+    animation: fadeIn 260ms ease both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mobile-panel {
+    width: 100%;
+    max-width: 520px;
+    background: rgb(15, 23, 32);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    box-shadow: 0 20px 60px rgba(2, 6, 23, 0.6);
+    transform: translateY(8px);
+    animation: panelIn 320ms cubic-bezier(.2, .9, .3, 1) both;
+}
+
+@keyframes panelIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mobile-close {
+    float: right;
+    background: transparent;
+    border: 0;
+    color: var(--text);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.mobile-link {
+    text-decoration: none;
+    color: var(--text);
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    background: transparent;
+    transition: background var(--transition), transform var(--transition);
+}
+
+.mobile-link:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateX(6px);
+}
+
+.page {
+    padding-top: 22px;
+    padding-bottom: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.card {
+    background: rgb(19, 27, 36);
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: transform 320ms cubic-bezier(.2, .9, .3, 1), box-shadow 320ms;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 48px rgba(2, 6, 23, 0.56), inset 0 0 0 2px rgb(51, 57, 71);
+}
+
+@media (max-width: 980px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .brand {
+        font-size: 16px;
+    }
+
+    .burger {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        visibility: visible;
+    }
+}
+
+a {
+    color: inherit;
+}
+
+.site-footer {
+    margin-top: 36px;
+    padding: 20px 0;
+    color: rgba(230, 237, 243, 0.8);
+    text-align: center;
+}
+
+.names:hover {
+    background: rgba(22, 64, 101, 0.799);
+}
+
+.vospit {
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.45);
+    transition: color 320ms ease-in-out;
+}
+
+.vospit:hover {
+    color: aqua;
+}
+
+#new {
+    background: rgb(57, 65, 72);
+}

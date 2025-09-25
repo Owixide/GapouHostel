@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Общежитие ГАПОУ "СЛТ" №2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner" id="headerInner">
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="bar" aria-hidden="true"></span>
+      </button>
+
+      <div class="brand" id="brand">Общежитие ГАПОУ "СЛТ" №2</div>
+
+      <nav class="nav" id="mainNav" aria-label="Главная навигация">
+        <a id="new" href="index.html" class="nav-link">Главная</a>
+        <a href="contacts.html" class="nav-link">Контакты</a>
+        <a href="rules.html" class="nav-link">Правила и условия</a>
+        <a href="docs.html" class="nav-link">Документы</a>
+        <a href="shop.html" class="nav-link">Доска объявлений</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="mobile-panel" role="menu" aria-labelledby="burger">
+      <button class="mobile-close" id="mobileClose" aria-label="Закрыть меню">&times;</button>
+      <nav class="mobile-nav" id="mobileNav">
+        <a id="new" href="index.html" class="mobile-link" role="menuitem">Главная</a>
+        <a href="contacts.html" class="mobile-link" role="menuitem">Контакты</a>
+        <a href="rules.html" class="mobile-link" role="menuitem">Правила и условия</a>
+        <a href="docs.html" class="mobile-link" role="menuitem">Документы</a>
+        <a href="shop.html" class="mobile-link" role="menuitem">Доска объявлений</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="page container">
+    <section style="margin-top:24px;">
+      <h2>Отражение новых событий, новостей и изменений</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Пока что...ничего нового</h3>
+          <p>Тут тоже ничего нового...но вы можете обратиться к администратору по поводу публикации объявления по ссылке
+            по <a class="vospit" href="https://t.me/Mr_Zefy">Telegram</a> или <a class="vospit"
+              href="https://vk.com/valery_elkin">VK</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Общежитие ГАПОУ "СЛТ" №2 | <a href="https://github.com/Owixide/Sitehostel">Official repos to
+        GitHub</a> <br> <a href="https://t.me/Mr_Zefy">Bug report</a> | <a href="https://t.me/Mr_Zefy">Suggest news</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
