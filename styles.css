@@ -373,6 +373,9 @@ a {
 a, button, [role="button"], input[type="submit"], input[type="button"] {
     -webkit-tap-highlight-color: transparent;
 }
+a:focus, button:focus {
+    outline: none;
+}
 #whatme{
     display: flex;
     justify-content: center;
