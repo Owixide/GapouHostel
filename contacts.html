@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Общежитие ГАПОУ "СЛТ" №2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,66 +15,81 @@
                 aria-controls="mobileMenu">
                 <span class="bar" aria-hidden="true"></span>
             </button>
-
             <div class="brand" id="brand">Общежитие ГАПОУ "СЛТ" №2</div>
-
-            <nav class="nav" id="mainNav" aria-label="Главная навигация">
-                <a href="index.html" class="nav-link">Главная</a>
-                <a id="new" href="contacts.html" class="nav-link">Контакты</a>
-                <a href="rules.html" class="nav-link">Правила и условия</a>
-                <a href="docs.html" class="nav-link">Документы</a>
-                <a href="shop.html" class="nav-link">Доска объявлений</a>
-            </nav>
         </div>
     </header>
-
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-modal="true">
         <div class="mobile-panel" role="menu" aria-labelledby="burger">
             <button class="mobile-close" id="mobileClose" aria-label="Закрыть меню">&times;</button>
             <nav class="mobile-nav" id="mobileNav">
                 <a href="index.html" class="mobile-link" role="menuitem">Главная</a>
-                <a id="new" href="contacts.html" class="mobile-link" role="menuitem">Контакты</a>
-                <a href="rules.html" class="mobile-link" role="menuitem">Правила и условия</a>
+                <a id="active2" href="contacts.html" class="mobile-link" role="menuitem">Контакты</a>
                 <a href="docs.html" class="mobile-link" role="menuitem">Документы</a>
                 <a href="shop.html" class="mobile-link" role="menuitem">Доска объявлений</a>
+                <a href="lesson.html" class="mobile-link" role="menuitem">Расписание занятий</a>
             </nav>
         </div>
     </div>
-
-    <main class="page container">
-        </section>
-
-        <section style="margin-top:24px;">
-            <h2>Контакты воспитателей и администратора, показатель текущей активности</h2>
-            <div class="cards">
-                <article class="card">
-                    <h3>Иванова Анастасия Александровна 🟢</h3>
-                    <p>Мобильный номер телефона: +79042367421<br>Связаться через VK можно по <a class="vospit" href="https://vk.com/id58027763">ссылке</a>.<br>Режим работы воспитателя с 16:00 до 8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
-                </article>
-                <article class="card">
-                    <h3>Паршуков Владимир Леонидович 🔴</h3>
-                    <p>Мобильный номер телефона: +79125058528<br>Связаться через VK можно по <a class="vospit"
-                        href="https://vk.com/id147843404">ссылке</a>.<br>Режим работы воспитателя с 16:00 до 8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
-                </article>
-                <article class="card">
-                    <h3>Дворникова Мария Фёдоровна 🔴</h3>
-                    <p>Мобильный номер телефона: +79042279363<br>Связаться через VK можно по <a class="vospit"
-                        href="https://vk.com/mariya.dvornikova">ссылке</a>.<br>Режим работы воспитателя с 16:00 до 8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
-                </article>
-                <article class="card">
-                    <h3>Администратор</h3>
-                    <p>Связаться можно через <a class="vospit" href="https://vk.com/valery_elkin">VK</a> или <a class="vospit" href="https://t.me/Mr_Zefy">Telegram</a>.<br>Режим работы администратора с 8:00 до 22:00.</p>
-                </article>
-            </div>
-        </section>
+    <main class="page container" id="cont">
+        <div class="main-panel">
+            <section class="navigation-panel-sec">
+                <nav class="nav" id="mainNav" aria-label="Главная навигация">
+                    <div class="navigation-panel">
+                        <a href="index.html" class="nav-link">Главная</a>
+                        <a id="active1" href="contacts.html" class="nav-link">Контакты</a>
+                        <a href="docs.html" class="nav-link">Документы</a>
+                        <a href="shop.html" class="nav-link">Доска объявлений</a>
+                        <a href="lesson.html" class="nav-link">Расписание занятий</a>
+                    </div>
+                </nav>
+            </section>
+            <section style="margin-top:24px;">
+                <div id="whatme">
+                    <h3 class="whatme-text">
+                        Контакты
+                    </h3>
+                </div>
+                <h2 class="upper">Контакты воспитателей и администратора</h2>
+                <h3>Значения цветовых обозначений:</h3>
+                <p class="colors-bull">🟢 Активен</p>
+                <p class="colors-bull">🔴 Неактивен</p>
+                <p class="colors-bull" id="done-bottom">🟡 Отсутствие по болезни | другая причина</p>
+                <div class="cards">
+                    <article class="card">
+                        <h3>Иванова Анастасия Александровна 🟢</h3>
+                        <p>Мобильный номер телефона: <a class="vospit" href="tel:+79042367421">+7(904)236-74-21</a> <br>Связаться через VK
+                            можно по <a class="vospit" href="https://vk.com/id58027763">ссылке</a>.<br>Режим работы воспитателя с 16:00 до
+                            8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Паршуков Владимир Леонидович 🔴</h3>
+                        <p>Мобильный номер телефона: <a class="vospit" href="tel:+79125058528">+7(912)505-85-28</a><br>Связаться через VK
+                            можно по <a class="vospit" href="https://vk.com/id147843404">ссылке</a>.<br>Режим работы воспитателя с 16:00 до
+                            8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Дворникова Мария Фёдоровна 🔴</h3>
+                        <p>Мобильный номер телефона: <a class="vospit" href="tel:+79042279363">+7(904)227-93-63</a><br>Связаться через VK
+                            можно по <a class="vospit" href="https://vk.com/mariya.dvornikova">ссылке</a>.<br>Режим работы воспитателя с
+                            16:00 до 8:00. Вы можете уточнить у администратора, кто находится на смене в данный момент.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Администратор</h3>
+                        <p>Связаться можно через <a class="vospit" href="https://vk.com/valery_elkin">VK</a> или <a class="vospit"
+                                href="https://t.me/Mr_Zefy">Telegram</a>.<br>Режим работы администратора с 8:00 до 22:00.</p>
+                    </article>
+                </div>
+            </section>
+        </div>
     </main>
-
     <footer class="site-footer">
-        <div class="container">Общежитие ГАПОУ "СЛТ" №2 | <a href="https://github.com/Owixide/Sitehostel">Official repos
-                to GitHub</a> <br> <a href="https://t.me/Mr_Zefy">Bug report</a> | <a
-                href="https://t.me/Mr_Zefy">Suggest news</a></div>
+        <div class="container"><a class="footer-link" href="https://github.com/Owixide/Sitehostel">Official repos to
+                GitHub</a><br><a class="footer-link1" href="https://t.me/Mr_Zefy">Bug report</a><a class="footer-link"
+                href="https://t.me/Mr_Zefy">Suggest news</a> <a class="footer-link1" href="help.html">Help me!</a><br>
+            Update: 30.09.2025 | 03:00 VER:"1.3"
+        </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
+
 </html>
