@@ -1,6 +1,6 @@
 :root {
-    --bg: rgb(34, 34, 34);
-    --surface: rgb(34, 34, 34);
+    --bg: rgb(1, 4, 9);
+    --surface: rgb(1, 4, 9);
     --text: rgb(234, 244, 255);
     --muted: rgb(166, 200, 255);
     --primary: rgb(58, 163, 255);
@@ -24,7 +24,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.5;
-    background: rgb(20, 20, 20);
+    background: rgb(13, 17, 23);
 }
 
 #cont {
@@ -184,7 +184,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
-    background: rgba(34, 34, 34, 0.636);
+    background: rgba(21, 27, 35, 0.636);
     z-index: 60;
     padding: 28px;
     animation: fadeIn 260ms ease both;
@@ -203,7 +203,7 @@ body {
 .mobile-panel {
     width: 100%;
     max-width: 520px;
-    background: rgb(34, 34, 34);
+    background: rgb(3, 12, 27);
     border-radius: 12px;
     padding: 10px;
     border: 1px solid rgba(156, 165, 168, 0.221);
@@ -253,7 +253,7 @@ body {
 }
 
 .mobile-link:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.165);
     transform: translateX(6px);
 }
 
@@ -269,7 +269,7 @@ body {
 }
 
 .card {
-    background: rgb(34, 34, 34);
+    background: rgb(21, 27, 35);
     border-radius: 10px;
     width: 100%;
     padding: 14px;
@@ -342,11 +342,11 @@ a {
 }
 
 #active1 {
-    background: rgb(57, 65, 72);
+    background: rgb(35, 134, 54);
     border: 1px solid rgba(156, 165, 168, 0.221);
 }
 #active2 {
-    background: rgb(57, 65, 72);
+    background: rgb(35, 134, 54);
     border: 1px solid rgba(156, 165, 168, 0.221);
 }
 .navigation-panel{
@@ -374,7 +374,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(123, 123, 151, 0.294);
+    background: rgb(18, 23, 30);
+    border: 1px solid rgba(156, 165, 168, 0.221);
     max-height: 65px;
     border-radius: 10px;
     font-size: 40px;
