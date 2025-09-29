@@ -370,6 +370,9 @@ a {
     border-right: 1px solid rgba(156, 165, 168, 0.221);
     padding: 10px;
 }
+a, button, [role="button"], input[type="submit"], input[type="button"] {
+    -webkit-tap-highlight-color: transparent;
+}
 #whatme{
     display: flex;
     justify-content: center;
