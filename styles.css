@@ -407,3 +407,10 @@ a:focus, button:focus {
 .help-text{
     line-height: 0.9;
 }
+.warn{
+    background: rgba(171, 1, 1, 0.665);
+    transform: box-shadow 320ms;
+}
+.warn:hover{
+    box-shadow: inset 0 0 0 1.5px rgb(154, 0, 0);
+}
