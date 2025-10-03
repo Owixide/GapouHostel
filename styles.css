@@ -400,6 +400,7 @@ a:focus, button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: rgb(18, 23, 30);
     border: 2px dashed rgba(156, 165, 168, 0.221);
     max-height: 65px;
