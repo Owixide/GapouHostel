@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<a href="#commits" class="fixed-comment" aria-label="Переход на комментарии страницы">💬</a>
 <body>
     <header class="site-header" id="siteHeader">
         <div class="header-inner" id="headerInner">
@@ -26,7 +25,7 @@
                 <a href="index.html" class="mobile-link" role="menuitem">Главная</a>
                 <a href="contacts.html" class="mobile-link" role="menuitem">Контакты</a>
                 <a href="docs.html" class="mobile-link" role="menuitem">Документы</a>
-                <a id="active2" href="shop.html" class="mobile-link" role="menuitem">Доска объявлений</a>
+                <a href="shop.html" class="mobile-link" role="menuitem">Доска объявлений</a>
                 <a href="lesson.html" class="mobile-link" role="menuitem">Расписание занятий</a>
                 <a href="help.html" class="mobile-link" role="menuitem">Help</a>
             </nav>
@@ -40,7 +39,7 @@
                         <a href="index.html" class="nav-link">Главная</a>
                         <a href="contacts.html" class="nav-link">Контакты</a>
                         <a href="docs.html" class="nav-link">Документы</a>
-                        <a id="active1" href="shop.html" class="nav-link">Доска объявлений</a>
+                        <a href="shop.html" class="nav-link">Доска объявлений</a>
                         <a href="lesson.html" class="nav-link">Расписание занятий</a>
                         <a href="help.html" class="nav-link">Help</a>
                     </div>
@@ -49,42 +48,38 @@
             <section style="margin-top:24px;">
                 <div id="whatme">
                     <h3 class="whatme-text">
-                        Доска объявлений
+                        Пообщайтесь с нами в чате!
                     </h3>
                 </div>
-                <h2 class="upper">Обычный магазин для продаж между проживающими и не только</h2>
+                <h2 class="upper">Вы можете написать комментарий. Разработчик обязательно ответит на него</h2>
                 <div class="cards">
                     <article class="card">
-                        <h3>Пусто, не правда ли? Вы можете разбавить эту пустоту карточкой товара!</h3>
-                        <p>Напишите <a class="vospit" href="https://t.me/Mr_Zefy">администратору</a> если хотите выложить пост о продаже или запросе на преобретение!
-                        </p>
+                       <div class="comments" id="commits">
+                        <script src="https://giscus.app/client.js" 
+                        data-repo="Owixide/GapouHostel" 
+                        data-repo-id="R_kgDOP29PIg"
+                        data-category="Announcements" 
+                        data-category-id="DIC_kwDOP29PIs4CwHjD" 
+                        data-mapping="pathname"
+                        data-strict="0" 
+                        data-reactions-enabled="1" 
+                        data-emit-metadata="0" 
+                        data-input-position="top"
+                        data-theme="preferred_color_scheme" 
+                        data-lang="ru" 
+                        crossorigin="anonymous" 
+                        async>
+                        </script>
+                    </div>
                     </article>
                 </div>
             </section>
         </div>
     </main>
-    <div class="comments" id="commits">
-    <script src="https://giscus.app/client.js"
-        data-repo="Owixide/GapouHostel"
-        data-repo-id="R_kgDOP29PIg"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOP29PIs4CwHjD"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="preferred_color_scheme"
-        data-lang="ru"
-        crossorigin="anonymous"
-        async>
-</script>
-  </div>
     <footer class="site-footer">
         <div class="container"><a class="footer-link" href="https://github.com/Owixide/GapouHostel">Official repos to
                 GitHub</a><br><a class="footer-link1" href="https://t.me/Mr_Zefy">Bug report</a><a class="footer-link"
-                href="https://t.me/Mr_Zefy">Suggest news</a> <a class="footer-link1" href="help.html">Help</a><a
-                class="footer-link1" href="connect.html">Chat</a><br>
+                href="https://t.me/Mr_Zefy">Suggest news</a> <a class="footer-link1" href="help.html">Help</a><a class="footer-link1" href="connect.html">Chat</a><br>
             Update: 03.10.2025 | 17:00 VER:"1.5"
         </div>
     </footer>

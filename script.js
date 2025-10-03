@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var mobileClose = document.getElementById('mobileClose');
     var focusableSelectors = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
     var lastFocusedBeforeOpen = null;
+    var mobileLinks = document.querySelectorAll('.mobile-link');
+
+
+    mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeMobileMenu);
+    });
 
     function setBurgerInactive() {
         burger.classList.remove('force-show');
